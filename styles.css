@@ -212,3 +212,94 @@ body {
   background-image: url("https://assets.nicepagecdn.com/11a8ddce/3502986/images/lovely-woman-using-laptop-office.jpg");
   background-size: cover;
 }
+
+/* form */
+.contact {
+  height: 100vh;
+  display: flex;
+  /* background-image: url("./assets/formBackground.jpg");
+  background-size: cover; */
+  justify-content: center;
+  align-items: center;
+}
+.form-container {
+  width: 50%;
+  height: 30rem;
+  background-color: white;
+  display: flex;
+  border-radius: 20px;
+}
+.greeting-block {
+  /* background-color: #ff6008; */
+  width: 45%;
+  height: 100%;
+  text-align: center;
+  border-radius: 20px 0px 0 20px;
+}
+.greeting-block h2 {
+  font-family: "Segoe UI", Tahoma, Geneva, Verdana, sans-serif;
+  font-weight: 600;
+  font-size: 2rem;
+  padding: 30px;
+}
+.greeting-block img {
+  width: 100%;
+}
+.form-section {
+  width: 60%;
+  padding: 20px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  gap: 20px;
+}
+.form-section h2 {
+  font-size: 1.8rem;
+  text-align: center;
+  font-family: "Segoe UI", Tahoma, Geneva, Verdana, sans-serif;
+  padding: 20px 0;
+}
+
+.form-section input,
+textarea {
+  font-size: 1rem;
+  padding: 8px 10px;
+  display: block;
+  height: 50px;
+  width: 90%;
+  margin: 0 auto;
+  border: none;
+  border-bottom: 1px solid;
+  &::placeholder {
+    transform: translateY(0px);
+    transition: 0.5s;
+  }
+  &:hover,
+  &:focus,
+  &:active:focus {
+    color: #ff5722;
+    outline: none;
+    border-bottom: 1px solid #ff5722;
+    &::placeholder {
+      color: #ff5722;
+      position: relative;
+      transform: translateY(-20px);
+    }
+  }
+}
+/* .form-section textarea {
+  font-size: 1rem;
+  padding: 8px 10px;
+} */
+
+.form-section button {
+  font-size: 1.1rem;
+  padding: 7px 0;
+  background-color: rgb(37, 204, 37);
+  border: none;
+  font-weight: bold;
+  border-radius: 50px;
+  width: 90%;
+  margin: 0 auto;
+}

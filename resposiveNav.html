@@ -1,0 +1,108 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+   <meta charset="UTF-8">
+   <meta name="viewport" content="width=device-width, initial-scale=1.0">
+   <title>Document</title>
+   <style>
+      * {
+         margin: 0;
+         padding: 0;
+         box-sizing: border-box;
+      }
+
+      body {
+         font-family: Arial, sans-serif;
+      }
+
+      .header {
+         background-color: #333;
+         color: #fff;
+         padding: 10px 0;
+      }
+
+
+
+      @media screen and (max-width: 768px) {
+         .navbar__menu {
+            display: none;
+         }
+
+         .navbar__menu-item {
+            margin: 10px 0;
+         }
+
+         .navbar__toggle {
+            display: block;
+         }
+
+         .navbar__toggle.active .navbar__toggle-icon:nth-child(1) {
+            transform: rotate(45deg) translate(2px, 2px);
+         }
+
+         .navbar__toggle.active .navbar__toggle-icon:nth-child(2) {
+            opacity: 0;
+         }
+
+         .navbar__toggle.active .navbar__toggle-icon:nth-child(3) {
+            transform: rotate(-45deg) translate(7px, -7px);
+         }
+
+         .navbar__menu.active {
+            display: block;
+            position: absolute;
+            background-color: #333;
+            width: 15%;
+            top: 10%;
+            right: 0;
+            text-align: center;
+         }
+
+         .navbar__menu-item {
+            margin: 10px 0;
+         }
+      }
+   </style>
+</head>
+
+<body>
+   <header class="header">
+      <nav class="navbar">
+         <div class="navbar__logo">
+            <a href="#" class="navbar__logo-link">Logo</a>
+         </div>
+         <ul class="navbar__menu">
+            <li class="navbar__menu-item">
+               <a href="#" class="navbar__menu-link">Home</a>
+            </li>
+            <li class="navbar__menu-item">
+               <a href="#" class="navbar__menu-link">About</a>
+            </li>
+            <li class="navbar__menu-item">
+               <a href="#" class="navbar__menu-link">Services</a>
+            </li>
+            <li class="navbar__menu-item">
+               <a href="#" class="navbar__menu-link">Contact</a>
+            </li>
+         </ul>
+         <div class="navbar__toggle">
+            <span class="navbar__toggle-icon"></span>
+            <span class="navbar__toggle-icon"></span>
+            <span class="navbar__toggle-icon"></span>
+         </div>
+      </nav>
+   </header>
+   <script>
+      const navbarToggle = document.querySelector('.navbar__toggle');
+      const navbarMenu = document.querySelector('.navbar__menu');
+
+      navbarToggle.addEventListener('click', () => {
+         navbarToggle.classList.toggle('active');
+         navbarMenu.classList.toggle('active');
+      });
+
+   </script>
+</body>
+
+</html>
